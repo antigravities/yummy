@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies (use just `deno install` if deno.json has imports)
-RUN deno install --entrypoint main.ts
+RUN deno install --entrypoint index.mjs
 
 # Run the app
 CMD ["deno", "run", "--allow-net", "--allow-env", "index.mjs"]
